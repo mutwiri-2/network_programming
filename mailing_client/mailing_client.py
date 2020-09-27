@@ -27,7 +27,7 @@ msg = MIMEMultipart()
 
 # define message header
 msg['From'] = 'John Doe'
-msg['To'] = 'mail@gmail.com'
+msg['To'] = 'target_email'
 msg['Subject'] = 'Just a Test'
 
 # load text message
@@ -48,3 +48,6 @@ encoders.encode_base64(p)
 p.add_header('Content-Disposition', f'attachment: filename = {filename}')
 msg.attach(p)
 
+email_msg = msg.as_string()
+
+server.sendmail('source_email', 'target_email', email_msg)
