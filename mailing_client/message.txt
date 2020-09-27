@@ -1,0 +1,8 @@
+Hello World!
+
+This is a message sent using Python!
+Essentially using the smtplib module
+Kindly consider subscribing to our Newsletter
+
+Kind Regards,
+Kevin Mutwiri

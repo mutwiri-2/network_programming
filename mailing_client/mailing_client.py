@@ -21,3 +21,16 @@ with open((Path(file_path) / 'login_details.txt'), 'r') as f:
     password = f.readline()
 
 server.login(email, password)
+
+# compose email
+msg = MIMEMultipart()
+
+# define message header
+msg['From'] = 'Kevin Mutwiri'
+msg['To'] = 'devmutwiri2@gmail.com'
+msg['Subject'] = 'Just a Test'
+
+# load text message
+with open((Path(file_path) / 'message.txt'), 'r') as f:
+    message = f.read()
+    print(message)
