@@ -26,8 +26,8 @@ server.login(email, password) # have less secure apps allowed to login to your a
 msg = MIMEMultipart()
 
 # define message header
-msg['From'] = 'Kevin Mutwiri'
-msg['To'] = 'devmutwiri2@gmail.com'
+msg['From'] = 'John Doe'
+msg['To'] = 'mail@gmail.com'
 msg['Subject'] = 'Just a Test'
 
 # load text message
