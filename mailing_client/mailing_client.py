@@ -33,4 +33,6 @@ msg['Subject'] = 'Just a Test'
 # load text message
 with open((Path(file_path) / 'message.txt'), 'r') as f:
     message = f.read()
-    print(message)
+
+# attach text message to the msg object
+msg.attach(MIMEText(message, 'plain'))
