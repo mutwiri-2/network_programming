@@ -20,7 +20,7 @@ with open((Path(file_path) / 'login_details.txt'), 'r') as f:
     email = f.readline().rstrip()
     password = f.readline()
 
-server.login(email, password)
+server.login(email, password) # have less secure apps allowed to login to your account on Google settings
 
 # compose email
 msg = MIMEMultipart()
