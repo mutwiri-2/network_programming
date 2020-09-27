@@ -36,3 +36,15 @@ with open((Path(file_path) / 'message.txt'), 'r') as f:
 
 # attach text message to the msg object
 msg.attach(MIMEText(message, 'plain'))
+
+# add attachment (image)
+filename = 'code.jpg'
+attachment = open((Path(file_path) / filename), 'rb')
+
+# create a payload object
+p = MIMEBase('application', 'octet-stream')
+p.set_payload(attachment.read())
+encoders.encode_base64(p)
+p.add_header('Content-Disposition', f'attachment: filename = {filename}')
+msg.attach(p)
+
